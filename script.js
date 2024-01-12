@@ -16,17 +16,26 @@ function escrevendoLetra() {
 escrevendoLetra();
 
 function MenuMobol() {
-
     const ativaMenu = document.querySelector('.fa-bars');
     const navMenu = document.querySelector('header .navegacao-primaria');
 
     ativaMenu.addEventListener('click', () => {
-
         ativaMenu.classList.toggle('fa-x');
         navMenu.classList.toggle('ativado');
     });
+
+    const navLinks = document.querySelectorAll('.navegacao-primaria li a');
+
+    navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            ativaMenu.classList.remove('fa-x');
+            navMenu.classList.remove('ativado');
+        });
+    });
 }
+
 MenuMobol();
+
 
 function sobreMin() {
 
@@ -120,16 +129,19 @@ function listaProjetos() {
         if (buttom == 'design') {
             Lista[0].classList.add('ativo');
             Lista[1].classList.add('ativo');
+            Lista[9].classList.add('ativo');
         }
         if (buttom == 'graphic') {
             Lista[2].classList.add('ativo');
             Lista[3].classList.add('ativo');
+            
         }
         if (buttom == 'website') {
             Lista[4].classList.add('ativo');
             Lista[5].classList.add('ativo');
             Lista[6].classList.add('ativo');
             Lista[7].classList.add('ativo');
+            Lista[8].classList.add('ativo');
         }
         if (buttom == 'all') {
             Lista[0].classList.add('ativo');
@@ -140,6 +152,8 @@ function listaProjetos() {
             Lista[5].classList.add('ativo');
             Lista[6].classList.add('ativo');
             Lista[7].classList.add('ativo');
+            Lista[8].classList.add('ativo');
+            Lista[9].classList.add('ativo');
         }
     }
     buttonGeral.forEach((item) => {

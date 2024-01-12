@@ -61,6 +61,20 @@ header .navegacao-primaria li a:hover::after {
     border-bottom: 4px solid #dc3545;
 }
 
+header .navegacao-primaria.menu-open {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    background-color: #333; /* Adicione a cor de fundo desejada */
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário para evitar sobreposição com o cabeçalho */
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+
 /*DOWLOAD CV SECAO */
 
 .section-div {
@@ -85,6 +99,8 @@ header .navegacao-primaria li a:hover::after {
     font-family: 'poppins';
     font-weight: 600;
     color: #f7f7f7;
+    margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 .section-div div p {
@@ -704,7 +720,7 @@ main .sobre {
     }
 
     .div-textoSuperior h2{
-       margin-top: -130px; 
+       margin-top: -120px; 
     }
 
     section .div-textoSuperior p{
@@ -796,12 +812,16 @@ main .sobre {
 
 }
 
+.projects_models.notranslate .all {
+    display: inline-block;
+}
+
 .projects_armazenamento ul {
     display: grid;
     margin-top: 60px;
     gap: 20px;
     justify-content: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .projects_armazenamento ul li {
@@ -861,8 +881,29 @@ main .sobre {
         padding: 0px;
     }
 
+    .projects_armazenamento ul {
+        display: grid;
+        margin-top: 60px;
+        gap: 20px;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects_models ul li {
+        cursor: pointer;
+        font-family: 'poppins';
+        background-color: #222;
+        border: 1px solid #333;
+        padding: 6px 10px;
+        color: #707070;
+    }
+
 }
 
+a{
+    border-radius: none;
+    
+}
 
 /*FOOTER*/
 
